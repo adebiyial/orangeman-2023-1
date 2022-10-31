@@ -27,6 +27,8 @@ const StyledSection = styled.div`
     font-family: var(--sans);
     font-weight: 800;
     line-height: 1;
+    --max-width: 80%;
+    max-width: var(--max-width);
   }
 
   .footer {
@@ -58,6 +60,7 @@ const StyledSection = styled.div`
 
     .hero-title {
       font-size: 4vw;
+      --max-width: 75%;
     }
   }
 
@@ -75,6 +78,7 @@ const StyledSection = styled.div`
   @media screen and (max-width: 700px) {
     .hero-title {
       font-size: 8vw;
+      --max-width: 80%;
     }
   }
 `;
