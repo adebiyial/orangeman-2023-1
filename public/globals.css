@@ -168,7 +168,7 @@ ol,
 ul {
 	display: grid;
 	row-gap: 10px;
-	padding-left: 20px;
+	padding-left: 2rem;
 }
 
 hr {
