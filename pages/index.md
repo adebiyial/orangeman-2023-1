@@ -68,8 +68,11 @@ I founded a media and publication company, [The Septum](https://theseptum.com), 
 
 - [Twitter](https://twitter.com/adebiyial)
 - [Instagram](https://instagram.com/adebiyial)
-- [GitHub](https://github.com/adebiyial/)
+- [GitHub](https://github.com/adebiyial)
 - [Contact](mailto:hey@orangeman.dev)
+
+© All rights reserved / &copy; Adebiyi Adedotun / 2022 {% .copy %}
 {% /section %}
+
 
 {% /section %}

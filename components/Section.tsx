@@ -45,6 +45,10 @@ const StyledSection = styled.div`
         }
       }
     }
+
+    .copy {
+      margin-top: 2rem;
+    }
   }
 
   @media screen and (max-width: 1300px) {
