@@ -10,7 +10,7 @@ title: Adebiyi Adedotun is a User Interface and Frontend Engineer.
 
 {% timeline-block .inception %}
 ## Inception {% .title %}
-Sometimes in August, 2013, I wrote my first line of code (on paper) in Java. In my time in the [University of Ilorin](https://bit.ly/3ztwU3I), as a computer science undergrad (2013 - 2017), I wrote some code in the C language, much more in C++, and a lot in C#.
+Sometimes in August, 2013, I wrote my first line of code (on paper) in Java. In my time as a computer science undergrad (2013 - 2017), in the [University of Ilorin](https://bit.ly/3ztwU3I), I wrote some code in the C language, much more in C++, and a lot in C#.
 {% /timeline-block %}
 
 {% timeline-block .past-life %}
