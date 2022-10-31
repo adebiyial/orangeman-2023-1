@@ -88,7 +88,7 @@ export function Code({ children, language }) {
             appearance: none;
             position: absolute;
             color: inherit;
-            background: var(--code-background);
+            background: red;
             top: ${lines.length === 1 ? '17px' : '13px'};
             right: 11px;
             border-radius: 4px;
