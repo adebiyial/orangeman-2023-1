@@ -89,6 +89,8 @@ function getHeroText(pathname: string) {
 function MyApp({ Component, pageProps, router }: AppProps) {
   // const isDocs = props.router.asPath.startsWith('/docs');
   const isBlogPage = router.asPath.startsWith('/blog');
+  const isSingleBlogPost =
+    isBlogPage && router.pathname.replace('/blog', '').length !== 0;
 
   const { pathname } = router;
   const heroText = getHeroText(pathname.replace('/', ''));
@@ -98,11 +100,17 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     (link) => link.href !== pathname
   );
 
+  console.clear();
+  console.log(router.pathname);
+  console.log(isBlogPage);
+  console.log(isSingleBlogPost);
+
   return (
     <div className="root">
       <SEOHead />
       <Page>
-        {!isBlogPage && <Hero text={heroText} />}
+        {!isSingleBlogPost && <Hero text={heroText} />}
+        {/* <Hero text={heroText} /> */}
         {/* {!isBlogPage && <NavLinks {...{ links: computedTopNavLinks }} />} */}
         <NavLinks {...{ links: computedTopNavLinks }} />
         <Component {...pageProps} />

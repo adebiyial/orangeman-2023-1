@@ -36,7 +36,7 @@ const StyledSection = styled.div`
 
     .post-title {
       font-size: 4rem;
-      margin-top: 4rem;
+      /* margin-top: 4rem; */
       letter-spacing: -0.03em;
       font-family: var(--sans);
       font-weight: 800;
