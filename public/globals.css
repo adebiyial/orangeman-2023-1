@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+:root {
+	--nav-height: 61px;
+	--footer-height: 61px;
+	--landing-page-max-width: 1200px;
+
+	--sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, Inter, Segoe UI, Helvetica Neue,
+		sans-serif;
+
+	--bg-color: #0f0f0f;
+	--text-color: #fefce8;
+}
+
+html,
+body,
+#__next {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: var(--sans);
+}
+
+#__next {
+	/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+	isolation: isolate;
+}
+
+body {
+	color: var(--text-color);
+	background: var(--bg-color);
+	font-family: var(--sans);
+}
+
+a {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 1px;
+	transition: opacity 300ms ease;
+}
+
+a:hover {
+	opacity: 0.75;
+}
+
+.primary a,
+a.primary {
+	text-decoration: none;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.primary a:hover,
+a.primary:hover {
+	opacity: 1;
+}
+
+.primary a::after,
+a.primary::after {
+	content: '\00a0→';
+	position: relative;
+	display: inline-block;
+	transition: transform 300ms ease;
+}
+
+.primary a:hover::after,
+a.primary:hover::after {
+	transform: translateX(3px);
+}
+
+button {
+	cursor: pointer;
+	appearance: none;
+	border: none;
+	background: none;
+}
+
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+span,
+a,
+li,
+code,
+td,
+kbd,
+.heading {
+	-webkit-font-smoothing: antialiased;
+	color: inherit;
+}
+
+p, blockquote {
+	position: relative;
+}
+
+p {
+	text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion) {
+	.prefers-animation {
+		display: none;
+	}
+
+	.prefers-no-animation {
+		display: initial;
+	}
+}
