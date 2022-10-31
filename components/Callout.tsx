@@ -1,4 +1,4 @@
-import { AiFillCamera } from 'react-icons/ai';
+import { MdCodeOff } from 'react-icons/md';
 import styled from 'styled-components';
 
 interface IIconProps {
@@ -14,27 +14,23 @@ interface ICalloutProps {
 function Icon({ icon }: IIconProps) {
   switch (icon.toLowerCase()) {
     case 'note':
-      return <AiFillCamera />;
+      return <MdCodeOff />;
 
     case 'check':
-      return <AiFillCamera />;
+      return <MdCodeOff />;
 
     case 'warning':
-      return <AiFillCamera />;
+      return <MdCodeOff />;
 
     default:
-      return <AiFillCamera />;
+      return <MdCodeOff />;
   }
 }
 
 const StyledCallout = styled.div`
   margin: 1.5em auto;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-
-  @media screen and (min-width: 600px) {
-    padding: 15px 20px;
-  }
+  border-radius: 4px;
+  padding: 15px 20px;
 
   &.note {
     background: #fefce8;
@@ -49,9 +45,13 @@ const StyledCallout = styled.div`
   .content {
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 40px;
+    column-gap: 20px;
     align-content: center;
     align-items: center;
+
+    > svg {
+      font-size: 50px;
+    }
   }
 
   .copy {

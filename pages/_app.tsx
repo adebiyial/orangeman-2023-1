@@ -2,6 +2,9 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import '../public/globals.css';
+import '../public/prism.css';
+import '../public/scrollbar.css';
+
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@vercel/analytics/react';
 import Footer from '../components/Footer';
@@ -99,11 +102,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const computedTopNavLinks = topNavLinks.filter(
     (link) => link.href !== pathname
   );
-
-  console.clear();
-  console.log(router.pathname);
-  console.log(isBlogPage);
-  console.log(isSingleBlogPost);
 
   return (
     <div className="root">

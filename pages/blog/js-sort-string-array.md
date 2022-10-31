@@ -25,7 +25,7 @@ To grab the Unicode value of each character - lower or uppercase, we use the `ch
 
 Stay with me.
 
-We’ll start by creating utility functions that helps get the **unicode values** of characters as well as the characters. We will refer to them as we go.
+We&apos;ll start by creating utility functions that helps get the **unicode values** of characters as well as the characters. We will refer to them as we go.
 
 ```jsx
 // get Unicode values of character items in an array
@@ -49,7 +49,7 @@ function getCharacterUnicodeValue(character) {
 
 Notice the use of [Maps](https://www.digitalocean.com/community/tutorials/js-maps-introduction) here.
 
-We’ll call the utility functions like:
+We&apos;ll call the utility functions like:
 
 ```jsx
 getCharactersUnicodeValue("ABCDEFabcdef".split("")); // array of characters: [ 'A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e', 'f' ]
@@ -61,7 +61,7 @@ getCharacterUnicodeValue("A");
 // { A → 65 }
 ```
 
-And here’s yet another example:
+And here&apos;s yet another example:
 
 ```jsx
 const crocodilian = "crOCoDiliaN".split(""); // array of characters i.e [ 'c', 'r', 'O', 'C', 'o', 'D', 'i', 'l', 'i', 'a', 'N' ]
@@ -72,7 +72,7 @@ getCharactersUnicodeValue(crocodilian);
 // { c → 99, r → 114, O → 79, C → 67, o → 111, D → 68, i → 105, l → 108, a → 97, N → 78 }
 ```
 
-Notice that the UPPERCASE characters appear before the lowercase characters. And they’ll come sequentially. That is sorted like: `['Eggs', 'Tail', 'eggs']`. Notice how `Tail` comes before `eggs`? That’s expected because:
+Notice that the UPPERCASE characters appear before the lowercase characters. And they&apos;ll come sequentially. That is sorted like: `['Eggs', 'Tail', 'eggs']`. Notice how `Tail` comes before `eggs`? That&apos;s expected because:
 
 ```jsx
 getCharactersUnicodeValue(["Eggs", "Tail", "eggs"]);
@@ -86,7 +86,7 @@ getCharactersUnicodeValue(["Eggs", "Tail", "eggs"]);
 
 ## Sorting Mixed Case Strings
 
-Most of the time we’ll want our **array of mixed case strings** to be sorted regardless of the **casing**.
+Most of the time we&apos;ll want our **array of mixed case strings** to be sorted regardless of the **casing**.
 
 `const things = [ 'nest', 'Eggs', 'bite', 'gator', 'caYman', 'Grip', 'grips', 'Jaw', 'crocodilian', 'Bayou' ];`
 
@@ -100,7 +100,7 @@ And not:
 
 ## Attempt One: Without a Comparison Function
 
-Calling the sort method without a comparison function wouldn’t work:
+Calling the sort method without a comparison function wouldn&apos;t work:
 
 ```jsx
 things.sort();
@@ -130,7 +130,7 @@ things.sort(sortThings);
 // [ 'Bayou', 'Eggs', 'Grip', 'Jaw', 'bite', 'caYman', 'crocodilian', 'gator', 'grips', 'nest' ]
 ```
 
-Still, it doesn’t work. In fact, we might as well not have written a comparison function.
+Still, it doesn&apos;t work. In fact, we might as well not have written a comparison function.
 
 ## Attempt Three: With a Comparison Function and a Common Case
 
@@ -177,14 +177,14 @@ things.sort(sortThings);
 
 ---
 
-## But Wait, There’s More
+## But Wait, There&apos;s More
 
-Although browser vendors have their specific sorting algorithm, there are some techniques that we should be familiar with. Sorting is done on a `charCodeAt(index)` basis. In a scenario where two comparison items are almost similar, their `charCodeAt(index)` is being compared continuously. Where index starts from 0 until there’s a difference.
+Although browser vendors have their specific sorting algorithm, there are some techniques that we should be familiar with. Sorting is done on a `charCodeAt(index)` basis. In a scenario where two comparison items are almost similar, their `charCodeAt(index)` is being compared continuously. Where index starts from 0 until there&apos;s a difference.
 
 Take `eggs` and `Eggz` for example:
 
 1. Without converting to a lowercase, `Eggz` will come before `eggs` because the Unicode value of `E → 69` comes before that of `e → 101`.
-2. When there’s a conversion to a similar case - lowercase for example - we are essentially comparing `eggs` and `eggz`. `e → 101` and `e → 101` are equal.
+2. When there&apos;s a conversion to a similar case - lowercase for example - we are essentially comparing `eggs` and `eggz`. `e → 101` and `e → 101` are equal.
 
 Running:
 
@@ -241,7 +241,7 @@ things.sort(sortThings).reverse();
 
 ## Alternative: Using localeCompare
 
-Although the [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) string method can compare characters without regard for the case used, it’s a string method so it can’t be used directly on an array. To sort our `things` array with the `localeCompare` string method, we pass the `localeCompare` as the comparison function like so:
+Although the [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) string method can compare characters without regard for the case used, it&apos;s a string method so it can&apos;t be used directly on an array. To sort our `things` array with the `localeCompare` string method, we pass the `localeCompare` as the comparison function like so:
 
 ```jsx
 things.sort((a, b) => a.localeCompare(b));

@@ -22,6 +22,9 @@
 
 	--bg-color: #0f0f0f;
 	--text-color: #fefce8;
+
+	--scrollbar-size: 8px;
+	--scrollbar-bg: #353535;
 }
 
 html,
@@ -128,14 +131,14 @@ p {
 
 /* Global */
 p {
-	/* font-family: var(--sans); */
-	/* font-weight: 400; */
-	/* font-size: 20px; */
+	font-family: var(--sans);
+	font-weight: 400;
+	font-size: 18px;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 }
 
-/* @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
 	p {
 		font-size: 1.2rem;
 	}
@@ -145,7 +148,7 @@ p {
 	p {
 		font-size: 1rem;
 	}
-} */
+}
 
 code {
 	--code-background: #2d2d2d;
@@ -165,9 +168,7 @@ ol,
 ul {
 	display: grid;
 	row-gap: 10px;
-	padding: 0;
-	/* margin: 1rem 0 3rem 0; */
-	/* font-family: var(--sans); */
+	padding-left: 20px;
 }
 
 hr {
@@ -182,72 +183,4 @@ pre {
 
 kbd {
 	font-family: var(--mono);
-}
-
-/* Syntax highlighting */
-pre[class*='language-'] {
-	--text: white;
-	--bg: #272727;
-	--comment: rgba(255, 255, 255, 0.5);
-	--yellow: #ffa31a;
-	--red: #ff0000;
-	--purple: rebeccapurple;
-	--green: green;
-
-	/* Override Prism styles */
-	text-shadow: none !important;
-	color: var(--text) !important;
-	background: var(--bg) !important;
-	font-size: 14px !important;
-	line-height: 22px !important;
-	font-family: var(--mono) !important;
-	margin: 0 0 12px !important;
-	padding: 1em;
-	overflow: auto;
-}
-
-code[class*="language-"],
-pre[class*="language-"] {
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	tab-size: 4;
-	hyphens: none;
-}
-
-.token {
-	color: var(--text) !important;
-	background: transparent !important;
-}
-
-.token.comment {
-	color: var(--comment) !important;
-}
-
-pre .token.string,
-pre .token.boolean,
-pre .token.number,
-pre .token.property {
-	color: var(--yellow) !important;
-}
-
-pre .token.function,
-pre .token.tagType,
-pre .token.tag {
-	color: var(--red) !important;
-}
-
-pre .token.keyword,
-.cm-attribute {
-	color: var(--purple) !important;
-}
-
-pre .token.variable {
-	color: var(--green) !important;
-}
-
-pre .token.punctuation {
-	color: var(--green) !important;
 }

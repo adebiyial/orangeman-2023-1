@@ -7,13 +7,11 @@ description: Here's how to build a Twitter-like CSS spinning loader animation. W
 
 # {% $markdoc.frontmatter.title %} {% .post-title %}
 
-A slow network isn’t the worst thing in the world - it put me in front of the Twitter spinning loader animation for long enough for me to think: “I could create something like this”. And that’s what this post is about, creating a simple CSS spinning loader animation similar to Twitter’s.
+A slow network isn&apos;t the worst thing in the world - it put me in front of the Twitter spinning loader animation for long enough for me to think: “I could create something like this”. And that&apos;s what this post is about, creating a simple CSS spinning loader animation similar to Twitter&apos;s.
 
-Although **Twitter’s** is made from an *`SVG`*, it can also be created out of pure *`CSS`* using a simple CSS keyframe animation, with nothing but a single HTML element. As you’ll see, we’ll make heavy use of [CSS variables](https://alligator.io/css/css-variables/) to make our resulting CSS more flexible and extensible.
+Although **Twitter&apos;s** is made from an *`SVG`*, it can also be created out of pure *`CSS`* using a simple CSS keyframe animation, with nothing but a single HTML element. As you&apos;ll see, we&apos;ll make heavy use of CSS variables to make our resulting CSS more flexible and extensible.
 
-Let’s just get to it.
-
-📌 Note that the example in this post is not meant to be 100% identical to Twitter's loading animation.
+Let&apos;s just get to it.
 
 {% callout title="Hey you!" type="caution"%}
 
@@ -39,7 +37,6 @@ In CSS pseudocode (if you will), this roughly means:
 ## First, some initial setup
 
 ```css
-/* css file */
 :root {
   --s-loader-wrapper-bg-color: rgb(21, 22, 43);
   --s-loader-width: 20px;
@@ -59,11 +56,11 @@ body {
 }
 ```
 
-## What’s going on with the initial setup?
+## What&apos;s going on with the initial setup?
 
 On the `:root` pseudo-class, we defined some `CSS variables`:
 
-- `-s-loader-wrapper-bg-color`: the background color for the loader’s parent container
+- `-s-loader-wrapper-bg-color`: the background color for the loader&apos;s parent container
 - `-s-loader-width`: the loader width
 - `-s-loader-height`: the loader height (notice how we can assign a variable to another variable)
 - `-s-loader-border-color-trans`: an opaque version of the loader border color
@@ -84,31 +81,31 @@ On the `body` element, we:
 
 ```css
 .spinning-loader {
-	width: var(--s-loader-width);
-	height: var(--s-loader-height);
-	border: 5px solid var(--s-loader-border-color-trans);
-	border-left-color: var(--s-loader-border-color-full);
-	border-radius: 50%;
-	background: transparent;
-	animation-name: rotate-s-loader;
-	animation-iteration-count: infinite;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-	position: relative;
+  width: var(--s-loader-width);
+  height: var(--s-loader-height);
+  border: 5px solid var(--s-loader-border-color-trans);
+  border-left-color: var(--s-loader-border-color-full);
+  border-radius: 50%;
+  background: transparent;
+  animation-name: rotate-s-loader;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: relative;
 }
 ```
 
-## What’s going on here with the spinning loader?
+## What&apos;s going on here with the spinning loader?
 
 We set an equal width and height on the spinning loader so we can get a perfect square.
 
 Then we:
 
 - Create a `border` for the 4 sides with sufficient opacity.
-- Reduce the `opacity` on all border sides except for one of them (the left one in this case). That’ll serve as a *spinning-indicator*. The different color on only one of the border sides is the secret sauce here.
+- Reduce the `opacity` on all border sides except for one of them (the left one in this case). That&apos;ll serve as a *spinning-indicator*. The different color on only one of the border sides is the secret sauce here.
 - Create a perfect circle by applying a `border-radius` of 50% to the square.
 - Make the `background` of the div transparent.
-- `animation-name` - a reference to the animation name (we’ll define that next).
+- `animation-name` - a reference to the animation name (we&apos;ll define that next).
 - `animation-iteration-count`: how many cycles should the animation go?
 - `animation-duration`: how long should each cycle take?
 - `animation-timing-function`: this defines the speed of an animation over time. Here, a timing function of `linear` works for our needs because the speed will be constant.
