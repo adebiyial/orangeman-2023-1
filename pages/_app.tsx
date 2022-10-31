@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import '../public/globals.css';
+// eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@vercel/analytics/react';
 
 const TITLE = 'Adebiyi Adedotun';
