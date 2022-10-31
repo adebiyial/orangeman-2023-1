@@ -11,8 +11,8 @@ const StyledTimelineBlock = styled.div`
   grid-template-columns: auto 1fr;
   gap: 1rem;
   align-items: center;
-  padding: 2rem 0 0;
   position: relative;
+  padding: 2rem 0 0;
 
   .icon {
     --size: 44px;
@@ -137,10 +137,6 @@ const StyledTimelineBlock = styled.div`
 
     p {
       font-size: 1rem;
-    }
-
-    :first-child {
-      margin-top: 0px;
     }
   }
 `;

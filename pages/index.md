@@ -63,4 +63,13 @@ I founded a media and publication company, [The Septum](https://theseptum.com), 
 
 {% /section %}
 
+{% section .footer %}
+## Don't be a stranger {% .hero-title %}
+
+- [Twitter](https://twitter.com/adebiyial)
+- [Instagram](https://instagram.com/adebiyial)
+- [GitHub](https://github.com/adebiyial/)
+- [Contact](mailto:hey@orangeman.dev)
+{% /section %}
+
 {% /section %}
