@@ -13,36 +13,36 @@ import copy from 'copy-to-clipboard';
 
 // import { Icon } from './Icon';
 
-Prism.languages.markdoc = {
-  tag: {
-    pattern: /{%(.|\n)*?%}/i,
-    inside: {
-      tagType: {
-        pattern: /^({%\s*\/?)(\w*|-)*\b/i,
-        lookbehind: true,
-      },
-      id: /#(\w|-)*\b/,
-      string: /".*?"/,
-      equals: /=/,
-      number: /\b\d+\b/i,
-      variable: {
-        pattern: /\$[\w.]+/i,
-        inside: {
-          punctuation: /\./i,
-        },
-      },
-      function: /\b\w+(?=\()/,
-      punctuation: /({%|\/?%})/i,
-      boolean: /false|true/,
-    },
-  },
-  variable: {
-    pattern: /\$\w+/i,
-  },
-  function: {
-    pattern: /\b\w+(?=\()/i,
-  },
-};
+// Prism.languages.markdoc = {
+//   tag: {
+//     pattern: /{%(.|\n)*?%}/i,
+//     inside: {
+//       tagType: {
+//         pattern: /^({%\s*\/?)(\w*|-)*\b/i,
+//         lookbehind: true,
+//       },
+//       id: /#(\w|-)*\b/,
+//       string: /".*?"/,
+//       equals: /=/,
+//       number: /\b\d+\b/i,
+//       variable: {
+//         pattern: /\$[\w.]+/i,
+//         inside: {
+//           punctuation: /\./i,
+//         },
+//       },
+//       function: /\b\w+(?=\()/,
+//       punctuation: /({%|\/?%})/i,
+//       boolean: /false|true/,
+//     },
+//   },
+//   variable: {
+//     pattern: /\$\w+/i,
+//   },
+//   function: {
+//     pattern: /\b\w+(?=\()/i,
+//   },
+// };
 
 export function Code({ children, language }) {
   const [copied, setCopied] = React.useState(false);
