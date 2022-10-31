@@ -161,7 +161,7 @@ code {
 	background: var(--code-background);
 	border: 1px solid var(--code-border);
 	border-radius: 3px;
-	white-space: nowrap;
+	/* white-space: nowrap; */
 }
 
 ol,
