@@ -2,6 +2,14 @@ import styled from 'styled-components';
 import { AppLink } from './AppLink';
 
 const StyledNavLinks = styled.nav`
+  &.top-nav {
+    position: sticky;
+    top: 0;
+    background: #0f0f0f;
+    z-index: 1;
+    padding: 19px 10px;
+  }
+
   ul {
     list-style: none;
     padding-left: 0;
@@ -22,11 +30,13 @@ const StyledNavLinks = styled.nav`
 
 export function NavLinks({
   links,
+  ...props
 }: {
   links: Array<{ name: string; href: string }>;
 }) {
+  console.log(props);
   return (
-    <StyledNavLinks>
+    <StyledNavLinks {...props}>
       <ul>
         {links.map(({ name, href }) => (
           <li key={name}>

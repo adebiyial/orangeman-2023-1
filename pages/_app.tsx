@@ -108,9 +108,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <SEOHead />
       <Page>
         {!isSingleBlogPost && <Hero text={heroText} />}
-        {/* <Hero text={heroText} /> */}
-        {/* {!isBlogPage && <NavLinks {...{ links: computedTopNavLinks }} />} */}
-        <NavLinks {...{ links: computedTopNavLinks }} />
+        <NavLinks {...{ links: computedTopNavLinks, className: 'top-nav' }} />
         <Component {...pageProps} />
         <Footer />
       </Page>
