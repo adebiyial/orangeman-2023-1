@@ -45,10 +45,10 @@ const StyledTimelineBlock = styled.div`
 
   p {
     grid-column: 2;
-    font-family: var(--sans);
+    /* font-family: var(--sans);
     font-weight: 400;
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.5; */
   }
 
   hr {
@@ -59,12 +59,10 @@ const StyledTimelineBlock = styled.div`
 
   :first-child {
     padding-top: 0;
-    margin-top: 2rem;
   }
 
   :last-child {
     padding-bottom: 0;
-    margin-bottom: 2rem;
   }
 
   ::before {
@@ -121,10 +119,6 @@ const StyledTimelineBlock = styled.div`
 
   @media screen and (max-width: 1000px) {
     padding: 1rem 0;
-
-    p {
-      font-size: 1.2rem;
-    }
   }
 
   @media screen and (max-width: 700px) {
@@ -133,10 +127,6 @@ const StyledTimelineBlock = styled.div`
 
     .title {
       font-size: 1.375rem;
-    }
-
-    p {
-      font-size: 1rem;
     }
   }
 `;

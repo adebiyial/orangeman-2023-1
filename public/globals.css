@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 *,
 *::before,
@@ -17,6 +18,7 @@
 
 	--sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, Inter, Segoe UI, Helvetica Neue,
 		sans-serif;
+	--mono: 'IBM Plex Mono', monospace;
 
 	--bg-color: #0f0f0f;
 	--text-color: #fefce8;
@@ -105,7 +107,8 @@ kbd,
 	color: inherit;
 }
 
-p, blockquote {
+p,
+blockquote {
 	position: relative;
 }
 
@@ -121,4 +124,129 @@ p {
 	.prefers-no-animation {
 		display: initial;
 	}
+}
+
+/* Global */
+p {
+	/* font-family: var(--sans); */
+	/* font-weight: 400; */
+	/* font-size: 20px; */
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+}
+
+/* @media screen and (max-width: 1000px) {
+	p {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	p {
+		font-size: 1rem;
+	}
+} */
+
+code {
+	--code-background: #2d2d2d;
+	--code-border: black;
+
+	font-size: 15px;
+	font-family: var(--sans);
+	font-weight: 500;
+	padding: 1px 2px;
+	background: var(--code-background);
+	border: 1px solid var(--code-border);
+	border-radius: 3px;
+	white-space: nowrap;
+}
+
+ol,
+ul {
+	display: grid;
+	row-gap: 10px;
+	/* margin: 1rem 0 3rem 0; */
+	/* font-family: var(--sans); */
+}
+
+hr {
+	margin: 15px 0;
+	border: 1px solid #222;
+}
+
+pre {
+	border-radius: 3px;
+	border: 1px solid var(--code-border);
+}
+
+kbd {
+	font-family: var(--mono);
+}
+
+/* Syntax highlighting */
+pre[class*='language-'] {
+	--text: white;
+	--bg: #272727;
+	--comment: rgba(255, 255, 255, 0.5);
+	--yellow: #ffa31a;
+	--red: #ff0000;
+	--purple: rebeccapurple;
+	--green: green;
+
+	/* Override Prism styles */
+	text-shadow: none !important;
+	color: var(--text) !important;
+	background: var(--bg) !important;
+	font-size: 14px !important;
+	line-height: 22px !important;
+	font-family: var(--mono) !important;
+	margin: 0 0 12px !important;
+	padding: 1em;
+	overflow: auto;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	tab-size: 4;
+	hyphens: none;
+}
+
+.token {
+	color: var(--text) !important;
+	background: transparent !important;
+}
+
+.token.comment {
+	color: var(--comment) !important;
+}
+
+pre .token.string,
+pre .token.boolean,
+pre .token.number,
+pre .token.property {
+	color: var(--yellow) !important;
+}
+
+pre .token.function,
+pre .token.tagType,
+pre .token.tag {
+	color: var(--red) !important;
+}
+
+pre .token.keyword,
+.cm-attribute {
+	color: var(--purple) !important;
+}
+
+pre .token.variable {
+	color: var(--green) !important;
+}
+
+pre .token.punctuation {
+	color: var(--green) !important;
 }

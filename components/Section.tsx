@@ -7,78 +7,66 @@ interface ISectionProps {
 }
 
 const StyledSection = styled.div`
-  &.timeline-wrap {
-    position: relative;
+  &.timeline-wrap,
+  &.publications-wrap,
+  &.blog-wrap {
     margin: 3rem 0;
+  }
+
+  .timeline,
+  .publications {
     border-top: 1px solid #222;
     border-bottom: 1px solid #222;
+    padding: 2rem 0;
   }
 
-  .hero {
-    max-width: 768px;
-    margin-right: auto;
-    padding: 6rem 0 6rem 2rem;
+  .publications {
+    ol {
+      display: grid;
+      row-gap: 12px;
+      margin: 1rem 0 3rem 0;
+    }
   }
 
-  .hero-title {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    letter-spacing: -0.03em;
-    font-family: var(--sans);
-    font-weight: 800;
-    line-height: 1;
-    --max-width: 80%;
-    max-width: var(--max-width);
-  }
+  .blog {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #222;
+    display: grid;
+    row-gap: 1rem;
 
-  .footer {
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
+    .post-title {
+      font-size: 4rem;
+      margin-top: 4rem;
+      letter-spacing: -0.03em;
+      font-family: var(--sans);
+      font-weight: 800;
+      line-height: 1;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      padding: 2rem 0;
+    }
 
-      @supports (gap: 20px) {
-        gap: 20px;
+    /* pre {
+      display: none;
+    } */
+
+    @media screen and (max-width: 1300px) {
+      .post-title {
+        font-size: 4vw;
       }
+    }
 
-      @supports not (gap: 20px) {
-        li:not(:last-child) {
-          margin-right: 20px;
-        }
+    @media screen and (max-width: 1000px) {
+      .post-title {
+        font-size: 6vw;
       }
     }
 
-    .copy {
-      margin-top: 2rem;
-    }
-  }
-
-  @media screen and (max-width: 1300px) {
-    .hero {
-      padding-right: 2rem;
-    }
-
-    .hero-title {
-      font-size: 4vw;
-      --max-width: 75%;
-    }
-  }
-
-  @media screen and (max-width: 1000px) {
-    .hero {
-      padding-right: 1rem;
-      padding-left: 1rem;
-    }
-
-    .hero-title {
-      font-size: 6vw;
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    .hero-title {
-      font-size: 8vw;
-      --max-width: 80%;
+    @media screen and (max-width: 700px) {
+      .post-title {
+        font-size: 7vw;
+        line-height: 1.2;
+      }
     }
   }
 `;

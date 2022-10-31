@@ -4,6 +4,33 @@ import Head from 'next/head';
 import '../public/globals.css';
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@vercel/analytics/react';
+import Footer from '../components/Footer';
+import Page from '../components/Page';
+import Hero from '../components/Hero';
+import { NavLinks } from '../components/NavLinks';
+
+const topNavLinks = [
+  {
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'Blog',
+    href: '/blog',
+  },
+  {
+    name: 'Projects',
+    href: '/projects',
+  },
+  {
+    name: 'Laboratory',
+    href: '/lab',
+  },
+  {
+    name: 'Publications',
+    href: '/publications',
+  },
+];
 
 const TITLE = 'Adebiyi Adedotun';
 const DESCRIPTION = 'User Interface and Frontend Engineer';
@@ -44,11 +71,43 @@ function SEOHead({
   );
 }
 
-function MyApp({ Component, pageProps }: AppProps) {
+function getHeroText(pathname: string) {
+  switch (pathname.toLowerCase()) {
+    case 'blog':
+      return 'Blog';
+    case 'projects':
+      return 'Projects';
+    case 'lab':
+      return 'Laboratory';
+    case 'publications':
+      return 'Publications';
+    default:
+      return 'Adebiyi Adedotun is a User Interface and Frontend Engineer.';
+  }
+}
+
+function MyApp({ Component, pageProps, router }: AppProps) {
+  // const isDocs = props.router.asPath.startsWith('/docs');
+  const isBlogPage = router.asPath.startsWith('/blog');
+
+  const { pathname } = router;
+  const heroText = getHeroText(pathname.replace('/', ''));
+
+  // Removes the current path from the list.
+  const computedTopNavLinks = topNavLinks.filter(
+    (link) => link.href !== pathname
+  );
+
   return (
     <div className="root">
       <SEOHead />
-      <Component {...pageProps} />
+      <Page>
+        {!isBlogPage && <Hero text={heroText} />}
+        {/* {!isBlogPage && <NavLinks {...{ links: computedTopNavLinks }} />} */}
+        <NavLinks {...{ links: computedTopNavLinks }} />
+        <Component {...pageProps} />
+        <Footer />
+      </Page>
       <Analytics />
     </div>
   );

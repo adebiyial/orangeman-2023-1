@@ -2,10 +2,6 @@
 title: Adebiyi Adedotun is a User Interface and Frontend Engineer.
 ---
 
-{% section .hero %}
-
-# {% $markdoc.frontmatter.title %} {% .hero-title %}
-
 {% section .timeline%}
 
 {% timeline-block .inception %}
@@ -60,19 +56,5 @@ At the heart of it, I am a Computer Scientist who strives to understand anything
 ## The Septum: the center that holds {% .title %}
 I founded a media and publication company, [The Septum](https://theseptum.com), focused on creating content that fosters the art of communication in many forms such as writing, podcasts, videos, and more.
 {% /timeline-block %}
-
-{% /section %}
-
-{% section .footer %}
-## Don't be a stranger {% .hero-title %}
-
-- [Twitter](https://twitter.com/adebiyial)
-- [Instagram](https://instagram.com/adebiyial)
-- [GitHub](https://github.com/adebiyial)
-- [Contact](mailto:hey@orangeman.dev)
-
-© All rights reserved / &copy; Adebiyi Adedotun / 2022 {% .copy %}
-{% /section %}
-
 
 {% /section %}
