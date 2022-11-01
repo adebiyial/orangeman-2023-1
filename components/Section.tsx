@@ -8,8 +8,7 @@ interface ISectionProps {
 
 const StyledSection = styled.div`
   &.timeline-wrap,
-  &.publications-wrap,
-  &.blog-wrap {
+  &.publications-wrap {
     margin: 3rem 0;
   }
 
@@ -33,10 +32,10 @@ const StyledSection = styled.div`
     border-bottom: 1px solid #222;
     display: grid;
     row-gap: 1rem;
+    margin-bottom: 3rem;
 
     .post-title {
       font-size: 4rem;
-      /* margin-top: 4rem; */
       letter-spacing: -0.03em;
       font-family: var(--sans);
       font-weight: 800;

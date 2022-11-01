@@ -10,12 +10,12 @@ export const StyledCustomPre = styled.div`
     display: flex;
     flex-direction: column;
     background: #121212;
-    border: 2px solid #363636;
+    border: 1px solid #363636;
     border-radius: 4px;
   }
 
   .code-block__header {
-    border-bottom: 2px solid #363636;
+    border-bottom: 1px solid #363636;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     padding: 6px 6px 6px 8px;
@@ -140,7 +140,7 @@ export const LineNo = styled.span`
   padding-right: 0.5em;
   user-select: none;
   letter-spacing: -1px;
-  border-right: 2px solid #363636;
+  border-right: 1px solid #363636;
   position: sticky;
   left: 0;
   background: #121212;

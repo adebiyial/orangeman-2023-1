@@ -21,6 +21,7 @@
 
 	--bg-color: #0f0f0f;
 	--text-color: #fefce8;
+	--cta: orange;
 
 	--scrollbar-size: 8px;
 	--scrollbar-bg: #353535;
@@ -165,7 +166,7 @@ ol,
 ul {
 	display: grid;
 	row-gap: 10px;
-	padding-left: 2rem;
+	padding: 0 1rem 0rem 2rem;
 }
 
 hr {

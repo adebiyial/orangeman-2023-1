@@ -100,25 +100,21 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const { pathname } = router;
   const heroText = getHeroText(pathname.replace('/', ''));
 
-  // Removes the current path from the list.
-  const computedTopNavLinks = topNavLinks.filter(
-    (link) => link.href !== pathname
-  );
-
-  function getComputedTopNavLinks() {
-    const res = topNavLinks.filter((link) => link.href !== pathname);
-    console.log(res);
-
-    return res;
-  }
-
   return (
     <div className="root">
       <SEOHead />
-      <Page>
+      <Page
+        {...{
+          removeTopPadding: isSingleBlogPost,
+        }}
+      >
         {!isSingleBlogPost && <Hero text={heroText} />}
         <NavLinks
-          {...{ links: getComputedTopNavLinks(), className: 'top-nav' }}
+          {...{
+            pathname: `/${pathname.split('/').filter(Boolean)[0] || ''}`,
+            links: topNavLinks,
+            className: 'top-nav',
+          }}
         />
         <Component {...pageProps} />
         <Footer />

@@ -29,9 +29,11 @@ const StyledNavLinks = styled.nav`
 `;
 
 export function NavLinks({
+  pathname = '/',
   links,
   ...props
 }: {
+  pathname: string;
   links: Array<{ name: string; href: string }>;
 }) {
   return (
@@ -39,7 +41,14 @@ export function NavLinks({
       <ul>
         {links.map(({ name, href }) => (
           <li key={name}>
-            <AppLink {...{ className: 'link', href, target: '' }}>
+            <AppLink
+              {...{
+                isCurrent: pathname === href,
+                className: 'link',
+                href,
+                target: '',
+              }}
+            >
               {name}
             </AppLink>
           </li>

@@ -6,6 +6,12 @@ const StyledPage = styled.div`
   max-width: 768px;
   margin-right: auto;
 
+  &[data-rtp='true'] {
+    padding: 0;
+  }
+
+  /* is single and max-width is 700 */
+
   > * {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -14,14 +20,28 @@ const StyledPage = styled.div`
       padding-left: 1rem;
       padding-right: 1rem;
     }
+  }
 
-    @media screen and (max-width: 700px) {
+  @media screen and (max-width: 700px) {
+    > * {
       padding-left: 1rem;
       padding-right: 1rem;
+    }
+
+    &[data-rtp='true'] {
+      article {
+        padding: 0;
+      }
     }
   }
 `;
 
-export default function Page({ children }: { children: React.ReactNode }) {
-  return <StyledPage>{children}</StyledPage>;
+export default function Page({
+  removeTopPadding,
+  children,
+}: {
+  removeTopPadding: boolean;
+  children: React.ReactNode;
+}) {
+  return <StyledPage data-rtp={removeTopPadding}>{children}</StyledPage>;
 }
