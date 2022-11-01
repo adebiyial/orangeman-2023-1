@@ -13,8 +13,9 @@ const StyledNavLinks = styled.nav`
 
   ul {
     list-style: none;
-    padding-left: 0;
     display: flex;
+    overflow: auto;
+    padding: 0 10px 15px 0;
 
     @supports (gap: 20px) {
       gap: 20px;
