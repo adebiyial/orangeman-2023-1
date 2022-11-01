@@ -251,7 +251,7 @@ things.sort((a, b) => a.localeCompare(b));
 
 ## The code at a glance
 
-```jsx
+```js
 const things = [
   "nest",
   "Eggs",

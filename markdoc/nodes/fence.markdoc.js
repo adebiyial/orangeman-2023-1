@@ -1,4 +1,4 @@
-import { Code } from '../../components/Code';
+import { Code } from '../../components/Fence';
 
 export default {
 	render: Code,

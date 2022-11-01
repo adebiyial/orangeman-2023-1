@@ -73,7 +73,11 @@ On the `body` element, we:
 - We set the width and height
 - The `display`, `align-items` and `justify-content` centers the *children* of the `body` (the spinning loader - in this case)
 
-📌 You can read on viewport units and centering with flex or grid
+{% callout title="Hey you!" type="caution"%}
+
+You can read on viewport units and centering with flex or grid
+
+{% /callout %}
 
 ---
 

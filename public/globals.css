@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 *,
 *::before,
@@ -150,10 +149,9 @@ p {
 	}
 }
 
-code {
+code:not(.line-content) {
 	--code-background: #2d2d2d;
 	--code-border: black;
-
 	font-size: 15px;
 	font-family: var(--sans);
 	font-weight: 500;
@@ -161,7 +159,6 @@ code {
 	background: var(--code-background);
 	border: 1px solid var(--code-border);
 	border-radius: 3px;
-	/* white-space: nowrap; */
 }
 
 ol,
@@ -174,11 +171,6 @@ ul {
 hr {
 	margin: 15px 0;
 	border: 1px solid #222;
-}
-
-pre {
-	border-radius: 3px;
-	border: 1px solid var(--code-border);
 }
 
 kbd {

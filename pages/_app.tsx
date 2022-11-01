@@ -51,7 +51,10 @@ function SEOHead({
       <title>{`${TITLE} | ${title}`}</title>
       <link rel="shortcut icon" href="../public/favicon.ico" />
       <link rel="icon" href="../public/favicon.ico" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1,viewport-fit=cover"
+      />
       <meta name="referrer" content="strict-origin" />
 
       {/* Default */}
@@ -90,7 +93,6 @@ function getHeroText(pathname: string) {
 }
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  // const isDocs = props.router.asPath.startsWith('/docs');
   const isBlogPage = router.asPath.startsWith('/blog');
   const isSingleBlogPost =
     isBlogPage && router.pathname.replace('/blog', '').length !== 0;
@@ -103,12 +105,21 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     (link) => link.href !== pathname
   );
 
+  function getComputedTopNavLinks() {
+    const res = topNavLinks.filter((link) => link.href !== pathname);
+    console.log(res);
+
+    return res;
+  }
+
   return (
     <div className="root">
       <SEOHead />
       <Page>
         {!isSingleBlogPost && <Hero text={heroText} />}
-        <NavLinks {...{ links: computedTopNavLinks, className: 'top-nav' }} />
+        <NavLinks
+          {...{ links: getComputedTopNavLinks(), className: 'top-nav' }}
+        />
         <Component {...pageProps} />
         <Footer />
       </Page>

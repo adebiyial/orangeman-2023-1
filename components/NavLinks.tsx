@@ -7,14 +7,14 @@ const StyledNavLinks = styled.nav`
     top: 0;
     background: #0f0f0f;
     z-index: 1;
-    padding: 19px 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   ul {
     list-style: none;
     padding-left: 0;
     display: flex;
-    flex-wrap: wrap;
 
     @supports (gap: 20px) {
       gap: 20px;
@@ -34,7 +34,6 @@ export function NavLinks({
 }: {
   links: Array<{ name: string; href: string }>;
 }) {
-  console.log(props);
   return (
     <StyledNavLinks {...props}>
       <ul>

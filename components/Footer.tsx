@@ -4,6 +4,11 @@ import { NavLinks } from './NavLinks';
 const StyledFooter = styled.footer`
   display: grid;
   row-gap: 20px;
+
+  @media screen and (max-width: 700px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 `;
 
 const footerLinks = [

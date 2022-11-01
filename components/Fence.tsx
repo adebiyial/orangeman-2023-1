@@ -1,5 +1,6 @@
 import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 import styled from 'styled-components';
+import getDescriptiveLanguage from '../utils/getDescriptiveLanguage';
 
 export const StyledCustomPre = styled.div`
   overflow: hidden;
@@ -9,13 +10,12 @@ export const StyledCustomPre = styled.div`
     display: flex;
     flex-direction: column;
     background: #121212;
-    border: 1px solid #363636;
+    border: 2px solid #363636;
     border-radius: 4px;
-    overflow: hidden;
   }
 
   .code-block__header {
-    border-bottom: 1px solid #363636;
+    border-bottom: 2px solid #363636;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     padding: 6px 6px 6px 8px;
@@ -39,6 +39,7 @@ export const StyledCustomPre = styled.div`
 
   .code-block__header-text {
     font-weight: 700;
+    text-transform: uppercase;
   }
 
   .code-block__content {
@@ -74,13 +75,13 @@ export function Code({
     <StyledCustomPre>
       <div className="code-block">
         <div className="code-block__inner">
-          {/* <header className="code-block__header">
+          <header className="code-block__header">
             <div className="header-start">
               <span className="code-block__header-text">
                 {getDescriptiveLanguage(language)}
               </span>
             </div>
-          </header> */}
+          </header>
 
           <main className="code-block__content">
             <CodeBlock {...{ language: language as Language }}>
@@ -108,64 +109,41 @@ function CodeBlock({
       language={language}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <Pre
+        <pre
           className={['custom-scrollbar', className].filter(Boolean).join(' ')}
           style={style}
         >
-          <LineNumbers className="line-numbers">
-            <div className="line-numbers__container">
-              {tokens.map((_, i) => (
-                <span className="line-no">{i + 1}</span>
-              ))}
-            </div>
-          </LineNumbers>
           <LineContent className="line-content">
             {tokens.map((line, i) => (
-              <div key={i} {...getLineProps({ line, key: i })} className="line">
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token, key })} />
-                ))}
+              <div key={i} {...getLineProps({ line, key: i })}>
+                <span>
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token, key })} />
+                  ))}
+                </span>
               </div>
             ))}
           </LineContent>
-        </Pre>
+        </pre>
       )}
     </Highlight>
   );
 }
 
-const Pre = styled.pre`
-  display: flex;
-  font: inherit;
-  height: 100%;
+export const LineContent = styled.code`
+  padding: 15px;
+  display: block;
 `;
 
-export const LineNumbers = styled.div`
-  height: auto;
-  display: flex;
+export const LineNo = styled.span`
+  text-align: right;
+  padding-right: 0.5em;
+  user-select: none;
+  letter-spacing: -1px;
+  border-right: 2px solid #363636;
   position: sticky;
-  top: 0;
   left: 0;
-  z-index: 1;
-
-  .line-numbers__container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    min-width: 38px;
-    text-align: right;
-    z-index: 1;
-    padding: 16px 10px;
-    min-height: 100%;
-    user-select: none;
-    letter-spacing: -1px;
-    border-right: 1px solid #363636;
-    background: #121212;
-  }
-`;
-
-export const LineContent = styled.span`
-  /* display: table; */
-  position: relative;
-  padding: 16px 10px 20px;
+  background: #121212;
+  padding-left: 15px;
+  min-width: 38px;
 `;

@@ -1,24 +1,22 @@
 code[class*='language-'],
 pre[class*='language-'] {
-	color: #ccc;
+	color: var(--text-color);
 	background: none;
-	font-family: 'IBM Plex Mono', monospace;
-	font-size: 14px;
-	font-weight: 500;
+	font-family: var(--mono);
 	text-align: left;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
-	tab-size: 4;
-	hyphens: none;
 	font-size: 14px;
+	font-weight: 800;
+	line-height: 1.5;
+	tab-size: 2;
+	hyphens: none;
 }
 
 /* Code blocks */
 pre[class*='language-'] {
 	overflow: auto;
-	padding: 15px 15px 15px 0;
 }
 
 :not(pre)>code[class*='language-'],
@@ -106,8 +104,4 @@ pre[class*='language-'] {
 
 .token.inserted {
 	color: green;
-}
-
-pre[class*='language-'].line-numbers {
-	padding-left: 3.5em;
 }

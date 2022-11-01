@@ -46,9 +46,9 @@ const StyledSection = styled.div`
       padding: 2rem 0;
     }
 
-    /* pre {
-      display: none;
-    } */
+    li {
+      line-height: 1.5;
+    }
 
     @media screen and (max-width: 1300px) {
       .post-title {
@@ -66,6 +66,18 @@ const StyledSection = styled.div`
       .post-title {
         font-size: 7vw;
         line-height: 1.2;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      > *:not(ol, ul) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        &.callout {
+          border-radius: 0;
+          width: 100%;
+        }
       }
     }
   }
