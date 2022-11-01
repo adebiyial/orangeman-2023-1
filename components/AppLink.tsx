@@ -19,7 +19,6 @@ const StyledAppLink = styled.a`
 
   &[data-current='true'] {
     text-decoration-color: var(--cta);
-    pointer-events: none;
   }
 `;
 
