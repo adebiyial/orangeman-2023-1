@@ -34,7 +34,7 @@ export function NavLinks({
   links,
   ...props
 }: {
-  pathname: string;
+  pathname?: string;
   links: Array<{ name: string; href: string }>;
 }) {
   return (
