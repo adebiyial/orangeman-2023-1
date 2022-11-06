@@ -25,8 +25,8 @@ const footerLinks = [
     href: 'https://github.com/adebiyial',
   },
   {
-    name: 'Contact',
-    href: 'mailto:hey@orangeman.dev',
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/in/adebiyiadedotun',
   },
 ];
 
