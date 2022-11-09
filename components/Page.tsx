@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledPage = styled.div`
-  padding: 6rem 0;
+  padding-bottom: 3rem;
   max-width: 768px;
   margin-right: auto;
 
@@ -27,21 +27,9 @@ const StyledPage = styled.div`
       padding-left: 1rem;
       padding-right: 1rem;
     }
-
-    &[data-rtp='true'] {
-      article {
-        padding: 0;
-      }
-    }
   }
 `;
 
-export default function Page({
-  removeTopPadding,
-  children,
-}: {
-  removeTopPadding: boolean;
-  children: React.ReactNode;
-}) {
-  return <StyledPage data-rtp={removeTopPadding}>{children}</StyledPage>;
+export default function Page({ children }: { children: React.ReactNode }) {
+  return <StyledPage>{children}</StyledPage>;
 }

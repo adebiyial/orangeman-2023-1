@@ -103,12 +103,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <div className="root">
       <SEOHead />
-      <Page
-        {...{
-          removeTopPadding: isSingleBlogPost,
-        }}
-      >
-        {!isSingleBlogPost && <Hero text={heroText} />}
+      <Page>
         <NavLinks
           {...{
             pathname: `/${pathname.split('/').filter(Boolean)[0] || ''}`,
@@ -116,6 +111,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             className: 'top-nav',
           }}
         />
+        {!isSingleBlogPost && <Hero text={heroText} />}
         <Component {...pageProps} />
         <Footer />
       </Page>

@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledHero = styled.div`
+  padding-top: 3rem;
+
   .hero-title {
     font-size: 4rem;
     margin-bottom: 2rem;
