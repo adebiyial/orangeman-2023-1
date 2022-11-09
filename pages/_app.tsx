@@ -103,7 +103,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <div className="root">
       <SEOHead />
-      <Page>
+      <Page removeTopPadding={isSingleBlogPost}>
         <NavLinks
           {...{
             pathname: `/${pathname.split('/').filter(Boolean)[0] || ''}`,

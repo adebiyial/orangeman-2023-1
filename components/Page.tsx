@@ -27,9 +27,21 @@ const StyledPage = styled.div`
       padding-left: 1rem;
       padding-right: 1rem;
     }
+
+    &[data-rtp='true'] {
+      article {
+        padding: 0;
+      }
+    }
   }
 `;
 
-export default function Page({ children }: { children: React.ReactNode }) {
-  return <StyledPage>{children}</StyledPage>;
+export default function Page({
+  removeTopPadding,
+  children,
+}: {
+  removeTopPadding: boolean;
+  children: React.ReactNode;
+}) {
+  return <StyledPage data-rtp={removeTopPadding}>{children}</StyledPage>;
 }
