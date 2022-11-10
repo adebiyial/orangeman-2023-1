@@ -37,7 +37,7 @@ const topNavLinks = [
 
 const TITLE = 'Adebiyi Adedotun';
 const DESCRIPTION = 'User Interface and Frontend Engineer';
-const OPENGRAPH = 'https://orangeman.dev/orangeman-opengraph.png';
+const OPENGRAPH = 'https://www.orangeman.dev/orangeman-opengraph.png';
 
 function SEOHead({
   title = TITLE,
