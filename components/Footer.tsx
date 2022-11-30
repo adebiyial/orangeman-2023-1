@@ -4,6 +4,7 @@ import { NavLinks } from './NavLinks';
 const StyledFooter = styled.footer`
   display: grid;
   row-gap: 20px;
+  padding-bottom: 6rem;
 
   @media screen and (max-width: 700px) {
     padding-left: 1rem;

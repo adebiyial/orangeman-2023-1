@@ -42,7 +42,7 @@ const StyledSection = styled.div`
       line-height: 1;
       border-top: 1px solid #222;
       border-bottom: 1px solid #222;
-      padding: 2rem 0;
+      padding: 6rem 0 2rem;
     }
 
     li {

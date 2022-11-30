@@ -46,6 +46,7 @@ body {
 	background: var(--bg-color);
 	font-family: var(--sans);
 	background-color: #1f1f20;
+	overflow: hidden;
 }
 
 a {

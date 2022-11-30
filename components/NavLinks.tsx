@@ -3,8 +3,10 @@ import { AppLink } from './AppLink';
 
 const StyledNavLinks = styled.nav`
   &.top-nav {
-    position: sticky;
+    position: fixed;
     top: 0;
+    max-width: 600px;
+    width: 100%;
     background: var(--bg-color);
     z-index: 1;
     padding-top: 16px;

@@ -4,10 +4,10 @@ import styled from 'styled-components';
 const StyledPage = styled.div`
   padding-bottom: 3rem;
   max-width: 600px;
-  width: 600px;
   margin-right: auto;
   background-color: var(--bg-color);
-  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
 
   &[data-rtp='true'] {
     padding: 0;
