@@ -5,14 +5,12 @@ const StyledHero = styled.div`
   padding-top: 3rem;
 
   .hero-title {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
     letter-spacing: -0.03em;
     font-family: var(--sans);
     font-weight: 800;
     line-height: 1;
-    /* --max-width: 90%;
-    max-width: var(--max-width); */
   }
 
   @media screen and (max-width: 1300px) {

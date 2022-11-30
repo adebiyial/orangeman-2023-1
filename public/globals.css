@@ -45,6 +45,7 @@ body {
 	color: var(--text-color);
 	background: var(--bg-color);
 	font-family: var(--sans);
+	background-color: #1f1f20;
 }
 
 a {

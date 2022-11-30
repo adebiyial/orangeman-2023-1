@@ -3,8 +3,11 @@ import styled from 'styled-components';
 
 const StyledPage = styled.div`
   padding-bottom: 3rem;
-  max-width: 768px;
+  max-width: 600px;
+  width: 600px;
   margin-right: auto;
+  background-color: var(--bg-color);
+  min-height: 100vh;
 
   &[data-rtp='true'] {
     padding: 0;

@@ -5,7 +5,7 @@ const StyledNavLinks = styled.nav`
   &.top-nav {
     position: sticky;
     top: 0;
-    background: #0f0f0f;
+    background: var(--bg-color);
     z-index: 1;
     padding-top: 16px;
     padding-bottom: 16px;
