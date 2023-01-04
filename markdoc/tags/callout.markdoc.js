@@ -11,11 +11,11 @@ export default {
 		},
 		type: {
 			type: String,
-			default: 'note',
-			matches: ['caution', 'check', 'note', 'warning'],
+			default: 'tip',
+			matches: ['caution', 'check', 'tip', 'warning'],
 			errorLevel: 'critical',
 			description:
-				'Controls the color and icon of the callout. Can be: "caution", "check", "note", "warning"'
+				'Controls the color and icon of the callout. Can be: "caution", "check", "tip", "warning"'
 		}
 	}
 }

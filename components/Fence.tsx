@@ -4,7 +4,7 @@ import getDescriptiveLanguage from '../utils/getDescriptiveLanguage';
 
 export const StyledCustomPre = styled.div`
   overflow: hidden;
-  margin: 1.5em 0;
+  margin: 0 0 1.5em;
 
   .code-block__inner {
     display: flex;
@@ -39,11 +39,10 @@ export const StyledCustomPre = styled.div`
 
   .code-block__header-text {
     font-weight: 700;
-    text-transform: uppercase;
   }
 
   .code-block__content {
-    max-height: 500px;
+    max-height: 800px;
     overflow: auto;
   }
 

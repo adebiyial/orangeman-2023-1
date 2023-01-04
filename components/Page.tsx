@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledPage = styled.div`
   padding-bottom: 3rem;
-  max-width: 600px;
+  max-width: var(--page-max-width);
   margin-right: auto;
   background-color: var(--bg-color);
   height: 100vh;

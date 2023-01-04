@@ -1,40 +1,24 @@
-import { MdCodeOff } from 'react-icons/md';
 import styled from 'styled-components';
-
-interface IIconProps {
-  icon: string;
-}
 
 interface ICalloutProps {
   title: string;
-  type: 'caution' | 'check' | 'note' | 'warning';
+  type: 'caution' | 'check' | 'tip' | 'warning' | 'info';
   children: React.ReactNode;
 }
 
-function Icon({ icon }: IIconProps) {
-  switch (icon.toLowerCase()) {
-    case 'note':
-      return <MdCodeOff />;
-
-    case 'check':
-      return <MdCodeOff />;
-
-    case 'warning':
-      return <MdCodeOff />;
-
-    default:
-      return <MdCodeOff />;
-  }
-}
-
 const StyledCallout = styled.div`
-  margin: 1.5em auto;
+  margin: 0 auto;
   border-radius: 4px;
   padding: 15px 20px;
+  width: 100%;
+  color: #fff;
 
-  &.note {
-    background: #fefce8;
-    color: #000;
+  &.tip {
+    background: linear-gradient(to right, #ff600078, #ff000057);
+  }
+
+  &.info {
+    background: linear-gradient(to right, #00ffcf3b, #0070ff17);
   }
 
   &.caution {
@@ -42,18 +26,7 @@ const StyledCallout = styled.div`
     color: white;
   }
 
-  .content {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 20px;
-    align-content: center;
-    align-items: center;
-
-    > svg {
-      font-size: 50px;
-    }
-  }
-
+  .content,
   .copy {
     display: grid;
     row-gap: 10px;
@@ -61,10 +34,10 @@ const StyledCallout = styled.div`
 
   .title {
     font-weight: 800;
-
-    + span {
-      font-weight: 500;
-    }
+    font-size: 24px;
+    border-bottom: 0.2px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 10px;
+    margin-top: 0 !important;
   }
 `;
 
@@ -73,12 +46,9 @@ export function Callout({ title, type, children }: ICalloutProps) {
 
   return (
     <StyledCallout className={computedClassName}>
-      <div className="content">
-        <Icon icon={type} />
-        <div className="copy">
-          <span className="title">{title}</span>
-          <span>{children}</span>
-        </div>
+      <div className="copy">
+        <h1 className="title">{title}</h1>
+        <div className="content">{children}</div>
       </div>
     </StyledCallout>
   );

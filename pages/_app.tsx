@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 import Page from '../components/Page';
 import Hero from '../components/Hero';
 import { NavLinks } from '../components/NavLinks';
+import capitalizeFirstLetter from '../utils/captializeFirstLetter';
 
 const topNavLinks = [
   {
@@ -42,13 +43,15 @@ const OPENGRAPH = 'https://www.orangeman.dev/orangeman-opengraph.png';
 function SEOHead({
   title = TITLE,
   description = DESCRIPTION,
+  page,
 }: {
   title?: string;
   description?: string;
+  page: string;
 }) {
   return (
     <Head>
-      <title>{`${TITLE} | ${title}`}</title>
+      <title>{`${TITLE} | ${capitalizeFirstLetter(page)}`}</title>
       <link rel="shortcut icon" href="../public/favicon.ico" />
       <link rel="icon" href="../public/favicon.ico" />
       <meta
@@ -92,6 +95,15 @@ function getHeroText(pathname: string) {
   }
 }
 
+function getHeroSub(pathname: string) {
+  switch (pathname.toLowerCase()) {
+    case 'publications':
+      return 'All my articles that are not published on this website.';
+    default:
+      return '';
+  }
+}
+
 function MyApp({ Component, pageProps, router }: AppProps) {
   const isBlogPage = router.asPath.startsWith('/blog');
   const isSingleBlogPost =
@@ -99,10 +111,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   const { pathname } = router;
   const heroText = getHeroText(pathname.replace('/', ''));
+  const heroSub = getHeroSub(pathname.replace('/', ''));
 
   return (
     <div className="root">
-      <SEOHead />
+      <SEOHead page={pathname.replace('/', '')} />
       <Page removeTopPadding={isSingleBlogPost}>
         <NavLinks
           {...{
@@ -111,7 +124,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             className: 'top-nav',
           }}
         />
-        {!isSingleBlogPost && <Hero text={heroText} />}
+        {!isSingleBlogPost && <Hero text={heroText} sub={heroSub} />}
         <Component {...pageProps} />
         <Footer />
       </Page>

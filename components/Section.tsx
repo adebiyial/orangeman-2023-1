@@ -45,6 +45,15 @@ const StyledSection = styled.div`
       padding: 6rem 0 2rem;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 20px;
+    }
+
     li {
       line-height: 1.5;
     }
@@ -57,13 +66,13 @@ const StyledSection = styled.div`
 
     @media screen and (max-width: 1000px) {
       .post-title {
-        font-size: 6vw;
+        font-size: 5vw;
       }
     }
 
     @media screen and (max-width: 700px) {
       .post-title {
-        font-size: 7vw;
+        font-size: 8vw;
         line-height: 1.2;
         padding-left: 1rem;
         padding-right: 1rem;

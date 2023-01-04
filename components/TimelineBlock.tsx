@@ -9,7 +9,7 @@ interface ISectionProps {
 const StyledTimelineBlock = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
   position: relative;
   padding: 2rem 0 0;
@@ -52,7 +52,6 @@ const StyledTimelineBlock = styled.div`
   }
 
   hr {
-    margin: 15px 0;
     border: 1px solid #222;
     grid-column: 2;
   }

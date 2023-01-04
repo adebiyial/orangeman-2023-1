@@ -5,7 +5,7 @@ const StyledNavLinks = styled.nav`
   &.top-nav {
     position: fixed;
     top: 0;
-    max-width: 600px;
+    max-width: var(--page-max-width);
     width: 100%;
     background: var(--bg-color);
     z-index: 1;
