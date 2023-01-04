@@ -14,22 +14,20 @@ const StyledSection = styled.div`
 
   .timeline,
   .publications {
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
+    border-top: 1px solid var(--hr);
+    border-bottom: 1px solid var(--hr);
     padding: 2rem 0;
   }
 
   .publications {
     ol {
-      display: grid;
-      row-gap: 12px;
       margin: 1rem 0 3rem 0;
     }
   }
 
   .blog {
     padding-bottom: 2rem;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid var(--hr);
     display: grid;
     row-gap: 1rem;
     margin-bottom: 3rem;
@@ -40,8 +38,8 @@ const StyledSection = styled.div`
       font-family: var(--sans);
       font-weight: 800;
       line-height: 1;
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
+      border-top: 1px solid var(--hr);
+      border-bottom: 1px solid var(--hr);
       padding: 6rem 0 2rem;
     }
 

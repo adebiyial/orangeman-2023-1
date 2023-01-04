@@ -9,9 +9,9 @@ description: It can be tricky at first to understand the rules for the array sor
 
 The `sort` method available on the Array prototype allows you to sort the elements of an array and control how the sorting should be done. The aim of this post is to explain to you why, why not and how the `sort` method works when sorting an **array of numbers**.
 
-{% callout title="Hey you!" type="caution"%}
+{% callout title="TL;DR " type="info"%}
 
-**TL;DR —** Sort an array of numbers in ascending order using:`myArray.sort((a, b) => a - b);`
+Sort an array of numbers in ascending order using: `myArray.sort((a, b) => a - b);`
 
 {% /callout %}
 
@@ -46,15 +46,11 @@ eggsInNest.sort();
 // e.g.: [109, 136, 156, 188, 19, 190, 2, 34, 55, 90]
 ```
 
-{% callout title="Hey you!" type="caution"%}
+{% callout title="As you can see..." type="info"%}
 
-As you can see, there&apos;s a slight problem and sorting didn&apos;t quite work out as you might have expected. Read on to learn why and how to fix it.
+...there&apos;s a slight problem and sorting didn&apos;t quite work out as you might have expected. Read on to learn why and how to fix it.
 
 {% /callout %}
-
-
-
-
 
 By default the `sort()` method sorts the array:
 
@@ -127,9 +123,9 @@ Finally, there&apos;s even a shorter way to write the comparison function. Here:
 eggsInNest.sort((a, b) => a - b);
 ```
 
-{% callout title="Hey you!" type="caution"%}
+{% callout title="This is only Ok..." type="info"%}
 
-This is only Ok because the comparison function only returns **1, -1 or 0**. and subtracting the two intermediate values yields exactly that.
+...because the comparison function only returns **1, -1 or 0**. and subtracting the two intermediate values yields exactly that.
 However keep in mind - this can only be used with numeric types or
 objects whose `valueOf()` method returns numeric values (such as the Date object).
 

@@ -21,11 +21,6 @@ const StyledCallout = styled.div`
     background: linear-gradient(to right, #00ffcf3b, #0070ff17);
   }
 
-  &.caution {
-    background: #4d3d3c;
-    color: white;
-  }
-
   .content,
   .copy {
     display: grid;

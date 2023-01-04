@@ -45,10 +45,7 @@ const StyledTimelineBlock = styled.div`
 
   p {
     grid-column: 2;
-    /* font-family: var(--sans);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.5; */
+    color: #d1d1d1;
   }
 
   hr {

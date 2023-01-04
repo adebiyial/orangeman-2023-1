@@ -9,5 +9,4 @@ description: Learn about web development...
 1. [Using JavaScript's sort Method for Sorting Arrays of Strings](/blog/js-sort-string-array)
 1. [Using JavaScript's sort Method for Sorting Arrays of Numbers](/blog/js-sort-number-array)
 
-
 {% /section %}

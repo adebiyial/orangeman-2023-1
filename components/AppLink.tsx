@@ -10,12 +10,17 @@ interface IAppLinkProps {
   isCurrent: boolean;
 }
 
-const StyledAppLink = styled.a`
-  text-decoration: underline #59b3d6 3px;
-  text-underline-offset: 5px;
-  text-decoration-line: underline;
-  text-decoration-color: #59b3d6;
-  text-decoration-thickness: 3px;
+export const StyledAppLink = styled.a`
+  --thickness: 2px;
+  --offset: 5px;
+  --color: #6e8c56;
+  --line: underline;
+
+  text-decoration: var(--line) var(--color) var(--thickness);
+  text-underline-offset: var(--offset);
+  text-decoration-line: var(--line);
+  text-decoration-color: var(--color);
+  text-decoration-thickness: var(--thickness);
 
   &[data-current='true'] {
     text-decoration-color: var(--cta);

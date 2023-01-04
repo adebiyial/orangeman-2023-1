@@ -25,6 +25,7 @@
 
 	--scrollbar-size: 8px;
 	--scrollbar-bg: #353535;
+	--hr: #363636;
 }
 
 html,
@@ -132,7 +133,7 @@ p {
 }
 
 /* Global */
-p {
+p, li {
 	font-family: var(--sans);
 	font-weight: 500;
 	font-size: 17px;
@@ -141,13 +142,13 @@ p {
 }
 
 @media screen and (max-width: 1000px) {
-	p {
+	p, li {
 		font-size: 1.2rem;
 	}
 }
 
 @media screen and (max-width: 700px) {
-	p {
+	p , li{
 		font-size: 1rem;
 	}
 }
@@ -164,15 +165,8 @@ code:not(.line-content) {
 	border-radius: 3px;
 }
 
-ol,
-ul {
-	display: grid;
-	row-gap: 10px;
-	padding: 0 1rem 0rem 2rem;
-}
-
 hr {
-	border: 1px solid #222;
+	border: 1px solid var(--hr);
 }
 
 kbd {

@@ -13,9 +13,9 @@ Although **Twitter&apos;s** is made from an *`SVG`*, it can also be created out 
 
 Let&apos;s just get to it.
 
-{% callout title="Hey you!" type="caution"%}
+{% callout title="Keep in mind..." type="info"%}
 
-Note that the example in this post is not meant to be 100% identical to Twitter's loading animation.
+...that the example in this post is not meant to be 100% identical to Twitter's loading animation.
 
 {% /callout %}
 
@@ -72,12 +72,6 @@ On the `body` element, we:
 - Applied a background color (`rgb(21, 22, 43)` is a fallback for `-s-loader-wrapper-bg-color`)
 - We set the width and height
 - The `display`, `align-items` and `justify-content` centers the *children* of the `body` (the spinning loader - in this case)
-
-{% callout title="Hey you!" type="caution"%}
-
-You can read on viewport units and centering with flex or grid
-
-{% /callout %}
 
 ---
 
