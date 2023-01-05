@@ -90,6 +90,8 @@ function getHeroText(pathname: string) {
       return 'Laboratory';
     case 'publications':
       return 'Publications';
+    case 'books':
+      return 'Books';
     default:
       return 'Adebiyi Adedotun is a User Interface and Frontend Engineer.';
   }
@@ -105,6 +107,8 @@ function getHeroSub(pathname: string) {
       return "Where and when I've gotten my hands dirty.";
     case 'blog':
       return 'My technical articles, published on this site.';
+    case 'books':
+      return 'Selected books from my library.';
     default:
       return '';
   }

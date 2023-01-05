@@ -27,6 +27,9 @@
 	--scrollbar-size: 8px;
 	--scrollbar-bg: #353535;
 	--hr: #363636;
+
+	--font-size-3: 16px;
+	--line-height-3: 25px;
 }
 
 html,
