@@ -97,8 +97,14 @@ function getHeroText(pathname: string) {
 
 function getHeroSub(pathname: string) {
   switch (pathname.toLowerCase()) {
+    case 'lab':
+      return 'Where I repeatedly fail, but where things eventually get made.';
     case 'publications':
       return 'All my articles that are not published on this website.';
+    case 'projects':
+      return "Where and when I've gotten my hands dirty.";
+    case 'blog':
+      return 'My technical articles, published on this site.';
     default:
       return '';
   }
@@ -124,7 +130,14 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             className: 'top-nav',
           }}
         />
-        {!isSingleBlogPost && <Hero text={heroText} sub={heroSub} />}
+        {!isSingleBlogPost && (
+          <Hero
+            {...{
+              text: heroText,
+              ...(router.pathname === '/' ? '' : { sub: `/* ${heroSub} */` }),
+            }}
+          />
+        )}
         <Component {...pageProps} />
         <Footer />
       </Page>

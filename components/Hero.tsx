@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledHero = styled.div`
   padding-top: 6rem;
   display: grid;
-  row-gap: 1rem;
+  row-gap: 0.5rem;
 
   .hero-title {
     font-size: 3rem;
@@ -12,6 +12,10 @@ const StyledHero = styled.div`
     font-family: var(--sans);
     font-weight: 800;
     line-height: 1;
+  }
+
+  .hero-sub {
+    font-weight: 400;
   }
 
   @media screen and (max-width: 1300px) {

@@ -7,6 +7,7 @@
 }
 
 * {
+	scroll-behavior: smooth;
 	margin: 0;
 }
 
@@ -133,7 +134,8 @@ p {
 }
 
 /* Global */
-p, li {
+p,
+li {
 	font-family: var(--sans);
 	font-weight: 500;
 	font-size: 17px;
@@ -142,13 +144,17 @@ p, li {
 }
 
 @media screen and (max-width: 1000px) {
-	p, li {
+
+	p,
+	li {
 		font-size: 1.2rem;
 	}
 }
 
 @media screen and (max-width: 700px) {
-	p , li{
+
+	p,
+	li {
 		font-size: 1rem;
 	}
 }

@@ -170,10 +170,7 @@ things.sort(sortThings);
 // ['Bayou', 'bite', 'caYman', 'crocodilian', 'Eggs', 'gator', 'Grip', 'grips', 'Jaw', 'nest' 'eggz']
 ```
 
-<aside>
 🍼 And yippee it works now!
-
-</aside>
 
 ---
 
