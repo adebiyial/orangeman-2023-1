@@ -60,8 +60,7 @@ interface IListProps {
 export function List({ ordered, id, className, children }: IListProps) {
   return (
     <StyledList
-      as={ordered ? 'ol' : 'ul'}
-      {...{ id, className, 'data-ordered': ordered }}
+      {...{ as: ordered ? 'ol' : 'ul', id, className, 'data-ordered': ordered }}
     >
       {children}
     </StyledList>

@@ -41,6 +41,9 @@ export function Heading({
   const isBlog = router.pathname.startsWith('/blog');
   const isH1 = level === 1;
   const as = `h1${level}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  const cs = [isBlog && !isH1 ? 'heading' : '', className]
+    .filter(Boolean)
+    .join(' ');
 
   if (isBlog) {
     if (!isH1) {
@@ -62,8 +65,8 @@ export function Heading({
       );
     }
 
-    return <StyledHeading className="post-title">{children}</StyledHeading>;
+    return <StyledHeading className={cs}>{children}</StyledHeading>;
   }
 
-  return <h2 className="title">{children}</h2>;
+  return <h2 className={cs}>{children}</h2>;
 }
