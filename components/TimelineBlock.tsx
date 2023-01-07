@@ -49,8 +49,8 @@ const StyledTimelineBlock = styled.div`
   }
 
   hr {
-    border: 1px solid #222;
     grid-column: 2;
+    margin: 10px 0;
   }
 
   :first-child {
