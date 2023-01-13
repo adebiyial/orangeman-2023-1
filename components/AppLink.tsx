@@ -13,7 +13,7 @@ interface IAppLinkProps {
 export const StyledAppLink = styled.a`
   --thickness: 2px;
   --offset: 5px;
-  --color: #6e8c56;
+  --color: var(--cta2);
   --line: underline;
 
   text-decoration: var(--line) var(--color) var(--thickness);

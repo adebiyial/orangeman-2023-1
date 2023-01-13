@@ -13,8 +13,6 @@ desc: "Books I've read"
 
 ---
 
----
-
 - The Dream Machine
 - M. Mitchell Waldrop
 - [Buy](https://amzn.to/3Imu6L3)
@@ -30,8 +28,6 @@ desc: "Books I've read"
 - Killing Pablo: The Hunt for the Richest, Most Powerful Criminal in History
 - Mark Bowden
 - [Buy](https://amzn.to/3X5um4Z)
-
----
 
 {% /table %}
 

@@ -2,55 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledTable = styled.div`
+  overflow-y: auto;
+  --cellPadding: 0.75rem 0.45rem;
+
   table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    /* margin-top: 2rem;
-    margin-bottom: 2rem; */
-    overflow: hidden;
+    border-collapse: collapse;
+  }
+
+  th {
+    background: var(--body-bg, #1f1f20);
   }
 
   th,
-  td > strong {
-    font-size: var(--font-size-3);
-    line-height: var(--line-height-3);
-    font-weight: 500;
-    text-align: left;
-    padding: 0 16px 8px;
-  }
-
   td {
-    padding: 12px 16px 16px;
-    background-clip: padding-box;
-    border-bottom: 1px solid var(--hr);
-    border-right: 1px solid var(--hr);
+    text-align: left;
+    padding: var(--cellPadding);
+    border: 1px solid var(--hr);
   }
 
-  tr:first-child td {
-    border-top: 1px solid var(--hr);
+  th,
+  td:not(:first-of-type) {
+    white-space: nowrap;
   }
 
-  tr td:first-child {
-    border-left: 1px solid var(--hr);
+  td:first-of-type {
+    font-weight: 500;
   }
 
-  tr td:last-child {
-    border-right: 1px solid var(--hr);
-  }
-
-  tr:first-child td:first-child {
-    border-top-left-radius: 3px;
-  }
-  tr:last-child td:first-child {
-    border-bottom-left-radius: 3px;
-  }
-  tr:first-child td:last-child {
-    border-top-right-radius: 3px;
-  }
-  tr:last-child td:last-child {
-    border-bottom-right-radius: 3px;
-  }
+  /* td {
+    white-space: nowrap;
+  } */
 `;
 
 export function Table({ children }: { children: React.ReactNode }) {
