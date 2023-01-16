@@ -9,7 +9,6 @@ import '../public/scrollbar.css';
 import { Analytics } from '@vercel/analytics/react';
 import Footer from '../components/Footer';
 import Page from '../components/Page';
-import Hero from '../components/Hero';
 import { NavLinks } from '../components/NavLinks';
 import capitalizeFirstLetter from '../utils/captializeFirstLetter';
 
@@ -33,6 +32,10 @@ const topNavLinks = [
   {
     name: 'Publications',
     href: '/publications',
+  },
+  {
+    name: 'Sitemap',
+    href: '/sitemap',
   },
 ];
 
@@ -80,48 +83,12 @@ function SEOHead({
   );
 }
 
-function getHeroText(pathname: string) {
-  switch (pathname.toLowerCase()) {
-    case 'blog':
-      return 'Blog';
-    case 'projects':
-      return 'Projects';
-    case 'lab':
-      return 'Laboratory';
-    case 'publications':
-      return 'Publications';
-    case 'books':
-      return 'Books';
-    default:
-      return 'Adebiyi Adedotun is a User Interface and Frontend Engineer.';
-  }
-}
-
-function getHeroSub(pathname: string) {
-  switch (pathname.toLowerCase()) {
-    case 'lab':
-      return 'Where I repeatedly fail, but where things eventually get made.';
-    case 'publications':
-      return 'All my articles that are not published on this website.';
-    case 'projects':
-      return "Where and when I've gotten my hands dirty.";
-    case 'blog':
-      return 'My technical articles, published on this site.';
-    case 'books':
-      return 'Selected books from my library.';
-    default:
-      return '';
-  }
-}
-
 function MyApp({ Component, pageProps, router }: AppProps) {
   const isBlogPage = router.asPath.startsWith('/blog');
   const isSingleBlogPost =
     isBlogPage && router.pathname.replace('/blog', '').length !== 0;
 
   const { pathname } = router;
-  const heroText = getHeroText(pathname.replace('/', ''));
-  const heroSub = getHeroSub(pathname.replace('/', ''));
 
   return (
     <div className="root">
@@ -134,14 +101,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             className: 'top-nav',
           }}
         />
-        {!isSingleBlogPost && (
-          <Hero
-            {...{
-              text: heroText,
-              ...(router.pathname === '/' ? '' : { sub: `/* ${heroSub} */` }),
-            }}
-          />
-        )}
         <Component {...pageProps} />
         <Footer />
       </Page>

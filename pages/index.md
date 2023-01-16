@@ -2,6 +2,10 @@
 title: Adebiyi Adedotun is a User Interface and Frontend Engineer.
 ---
 
+{% hero %}
+# {% $markdoc.frontmatter.title %} {% .hero-title %}
+{% /hero %}
+
 {% section .timeline%}
 
 {% timelineBlock .inception %}

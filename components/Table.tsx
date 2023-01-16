@@ -22,17 +22,13 @@ const StyledTable = styled.div`
   }
 
   th,
-  td:not(:first-of-type) {
+  td:not(.title) {
     white-space: nowrap;
   }
 
-  td:first-of-type {
+  td.title {
     font-weight: 500;
   }
-
-  /* td {
-    white-space: nowrap;
-  } */
 `;
 
 export function Table({ children }: { children: React.ReactNode }) {

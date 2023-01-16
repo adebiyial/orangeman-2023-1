@@ -68,5 +68,9 @@ export function Heading({
     return <StyledHeading className={cs}>{children}</StyledHeading>;
   }
 
-  return <h2 className={cs}>{children}</h2>;
+  return (
+    <StyledHeading as={as} className={cs}>
+      {children}
+    </StyledHeading>
+  );
 }

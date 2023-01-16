@@ -1,6 +1,12 @@
 ---
-title: Publications
+title: 🗞️ Publications
+description: All my articles that are not published on this website.
 ---
+
+{% hero %}
+# {% $markdoc.frontmatter.title %} {% .hero-title %}
+{% $markdoc.frontmatter.description %} {% .hero-sub %}
+{% /hero %}
 
 {% section .publications%}
 

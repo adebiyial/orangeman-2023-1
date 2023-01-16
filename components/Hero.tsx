@@ -37,11 +37,6 @@ const StyledHero = styled.div`
   }
 `;
 
-export default function Hero({ text, sub }: { text: string; sub?: string }) {
-  return (
-    <StyledHero>
-      <h1 className="hero-title">{text}</h1>
-      {sub && <p className="hero-sub">{sub}</p>}
-    </StyledHero>
-  );
+export default function Hero({ children }: { children: React.ReactNode }) {
+  return <StyledHero>{children}</StyledHero>;
 }
