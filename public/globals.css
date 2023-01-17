@@ -141,19 +141,18 @@ p {
 p,
 li {
 	font-family: var(--sans);
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 17px;
 	line-height: 1.6;
 	text-rendering: optimizeLegibility;
 }
-
+/*
 @media screen and (max-width: 1000px) {
-
 	p,
 	li {
 		font-size: 1.2rem;
 	}
-}
+} */
 
 @media screen and (max-width: 700px) {
 
@@ -166,7 +165,7 @@ li {
 code:not(.line-content) {
 	--code-background: #2d2d2d;
 	--code-border: black;
-	font-size: 15px;
+	font-size: 14px;
 	font-family: var(--mono);
 	font-weight: 700;
 	padding: 1px 2px;

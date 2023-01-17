@@ -8,7 +8,7 @@ const StyledNavLinks = styled.nav`
     max-width: var(--page-max-width);
     width: 100%;
     background: var(--bg-color);
-    z-index: 1;
+    z-index: 2;
     padding-top: 16px;
     padding-bottom: 16px;
   }

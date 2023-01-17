@@ -29,6 +29,13 @@ const StyledTable = styled.div`
   td.title {
     font-weight: 500;
   }
+
+  @media screen and (max-width: 600px) {
+    th,
+    td {
+      white-space: nowrap;
+    }
+  }
 `;
 
 export function Table({ children }: { children: React.ReactNode }) {

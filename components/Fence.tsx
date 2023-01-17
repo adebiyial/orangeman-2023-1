@@ -4,7 +4,7 @@ import getDescriptiveLanguage from '../utils/getDescriptiveLanguage';
 
 export const StyledCustomPre = styled.div`
   overflow: hidden;
-  margin: 0 0 1.5em;
+  margin: 0 0 0.5em;
 
   .code-block__inner {
     display: flex;
@@ -18,7 +18,7 @@ export const StyledCustomPre = styled.div`
     border-bottom: 1px solid #363636;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
-    padding: 6px 6px 6px 8px;
+    padding: 6px 1rem 6px 1rem;
     font-size: 14px;
     color: var(--colors-white0);
     display: flex;

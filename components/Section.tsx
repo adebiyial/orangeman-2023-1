@@ -33,14 +33,14 @@ const StyledSection = styled.div`
     margin-bottom: 3rem;
 
     .post-title {
-      font-size: 3rem;
+      font-size: 2.5rem;
       letter-spacing: -0.03em;
       font-family: var(--sans);
       font-weight: 800;
       line-height: 1;
       border-top: 1px solid var(--hr);
       border-bottom: 1px solid var(--hr);
-      padding: 6rem 0 2rem;
+      padding: 4rem 0 2rem;
     }
 
     h1,

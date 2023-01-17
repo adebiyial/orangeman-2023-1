@@ -1,15 +1,20 @@
 import { ReactNode } from 'react';
 import styled from 'styled-components';
 import { StyledAppLink } from './AppLink';
+import { StyledCustomPre } from './Fence';
 
-const StyledList = styled.ol`
+export const StyledList = styled.ol`
   counter-reset: listCounter;
   list-style: none;
   display: grid;
-  row-gap: 1rem;
+  row-gap: 0.5rem;
 
   li {
     position: relative;
+
+    > ol {
+      margin-top: 0.5rem;
+    }
   }
 
   &[data-ordered='false'] {
@@ -37,9 +42,8 @@ const StyledList = styled.ol`
         content: counter(listCounter, decimal-leading-zero);
         content: counter(listCounter, decimal-leading-zero) '.';
         position: absolute;
-        top: 50%;
-        transform: translate(-35px, -50%);
-        font-weight: bold;
+        top: 0;
+        transform: translateX(-35px);
         z-index: 1;
       }
 
@@ -47,6 +51,21 @@ const StyledList = styled.ol`
         content: none;
       }
     }
+  }
+
+  ${StyledCustomPre} {
+    margin: 0.5em 0 0.5em 0;
+
+    @media screen and (max-width: 700px) {
+      .code-block__inner {
+        border-top-left-radius: 4px;
+        border: 1px solid #363636;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    padding-left: 3rem;
   }
 `;
 

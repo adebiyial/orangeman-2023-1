@@ -8,7 +8,6 @@ const StyledPage = styled.div`
   background-color: var(--bg-color);
   height: 100vh;
   overflow: auto;
-
   &[data-rtp='true'] {
     padding: 0;
   }
@@ -20,8 +19,6 @@ const StyledPage = styled.div`
     padding-right: 2rem;
 
     @media screen and (max-width: 1000px) {
-      padding-left: 1rem;
-      padding-right: 1rem;
     }
   }
 

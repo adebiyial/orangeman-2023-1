@@ -29,7 +29,7 @@ const StyledCallout = styled.div`
 
   .title {
     font-weight: 800;
-    font-size: 24px;
+    font-size: 20px;
     border-bottom: 0.2px solid rgba(255, 255, 255, 0.4);
     padding-bottom: 10px;
     margin-top: 0 !important;

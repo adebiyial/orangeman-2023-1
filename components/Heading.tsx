@@ -37,6 +37,7 @@ export function Heading({
 }: HeadingProps) {
   const router = useRouter();
 
+  const isSingleBlogPost = router.route.split('/').slice(1).length === 2;
   const isBlog = router.pathname.startsWith('/blog');
   const isH1 = level === 1;
   const as = `h${level}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -45,7 +46,7 @@ export function Heading({
     .join(' ');
   const sluggedId = slugify(id);
 
-  if (isBlog) {
+  if (isBlog && isSingleBlogPost) {
     if (!isH1) {
       return (
         <StyledHeading
@@ -65,7 +66,11 @@ export function Heading({
       );
     }
 
-    return <StyledHeading className={cs}>{children}</StyledHeading>;
+    return (
+      <StyledHeading className={cs} id={`${sluggedId}`}>
+        {children}
+      </StyledHeading>
+    );
   }
 
   return (
