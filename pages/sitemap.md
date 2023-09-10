@@ -16,3 +16,4 @@ description: Links to all the pages on this site.
 1. [Laboratory](/lab)
 1. [Publications](/publications)
 1. [Books](/books)
+2. [Timeline](/timeline)

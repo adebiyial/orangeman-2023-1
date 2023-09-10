@@ -41,6 +41,4 @@ description: All my articles that are not published on this website.
 1. [Delivering the Bloomreach Experience at the Speed of Layer0](https://developers.bloomreach.com/blog/2021/delivering-the-bloomreach-experience-at-the-speed-of-layer-0.html)
 1. [How to Leverage MACH to Improve Your Core Web Vitals Score](https://try.layer0.co/ebooks/leverage-mach-cwv/)
 
-
-
-{% /section%}
+{% /section %}

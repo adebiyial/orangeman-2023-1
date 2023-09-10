@@ -14,3 +14,7 @@ Todo
 2. SEO OG Images
 3. default section
 4. refactor section
+
+Screenshot dimensions
+<!-- 834 height -->
+<!-- 1206 width -->
